@@ -1,4 +1,4 @@
-import { Lightning, Colors } from "@lightningjs/sdk";
+import { Lightning, Colors, Router } from "@lightningjs/sdk";
 import Button from "../components/Button";
 import fontStyles from "../lib/fontStyles";
 import styles from "../lib/styles";
@@ -55,6 +55,9 @@ class Highscore extends Lightning.Component {
         PlayAgain: {
           type: Button,
           title: "Play Again",
+          signals: {
+            buttonPressed: "_buttonPressedHandler",
+          },
         },
 
         GoBackHome: {
@@ -63,6 +66,9 @@ class Highscore extends Lightning.Component {
             marginTop: styles.spacing.medium,
           },
           title: "Home",
+          signals: {
+            buttonPressed: "_buttonPressedHandler",
+          },
         },
 
         ClearHighscores: {
@@ -71,6 +77,9 @@ class Highscore extends Lightning.Component {
             marginTop: styles.spacing.medium,
           },
           title: "Clear Highscores",
+          signals: {
+            buttonPressed: "_buttonPressedHandler",
+          },
         },
       },
     };
@@ -119,6 +128,27 @@ class Highscore extends Lightning.Component {
   clearScores() {
     clearHighscores();
     this._renderHighscores();
+  }
+
+  _buttonPressedHandler() {
+    const focusedButton = this._getFocused();
+    const pageToNavigateTo = focusedButton._title;
+
+    switch (pageToNavigateTo) {
+      case "Play Again":
+        console.log("Navigate to play");
+        Router.navigate("play");
+        break;
+      case "Home":
+        Router.navigate("mainmenu");
+        break;
+      case "Clear Highscores":
+        this.clearScores();
+      default:
+        break;
+    }
+
+    //Router.navigate(`${pageToNavigateTo}`);
   }
 }
 

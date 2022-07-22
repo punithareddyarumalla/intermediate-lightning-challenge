@@ -10,7 +10,7 @@ export default {
       component: MainMenu,
     },
     {
-      path: "game",
+      path: "play",
       component: Game,
     },
     {

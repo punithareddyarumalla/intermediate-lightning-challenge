@@ -147,8 +147,6 @@ class Highscore extends Lightning.Component {
       default:
         break;
     }
-
-    //Router.navigate(`${pageToNavigateTo}`);
   }
 }
 

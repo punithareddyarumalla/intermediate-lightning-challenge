@@ -12,10 +12,12 @@ export default {
         {
             path: "highscore",
             component: Highscore,
+            widgets: ["Navbar"]
         },
         {
             path: "game",
             component: Game,
+            widgets: ["Navbar"]
         },
     ]
 };

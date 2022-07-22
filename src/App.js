@@ -1,6 +1,7 @@
 import { Utils, Router } from "@lightningjs/sdk";
 import colors from "./lib/colors";
 import routes from "./routes";
+import Navbar from "./widgets/Navbar"
 
 export default class App extends Router.App {
   _setup() {
@@ -15,6 +16,11 @@ export default class App extends Router.App {
 
       color: 0xff333333,
       rect: true,
+      Widgets: {
+        Navbar: {
+          type: Navbar
+        }
+      }
     };
   }
 

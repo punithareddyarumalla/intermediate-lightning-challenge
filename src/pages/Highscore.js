@@ -78,7 +78,7 @@ class Highscore extends Lightning.Component {
           },
           title: "Clear Highscores",
           signals: {
-            buttonPressed: "_highscorePressedHandler"
+            buttonPressed: "clearScores"
           }
         },
       },
@@ -136,10 +136,6 @@ class Highscore extends Lightning.Component {
 
   _homePressedHandler() {
     Router.navigate("mainMenu");
-  }
-
-  _highscorePressedHandler() {
-    Router.navigate("highscore");
   }
 }
 

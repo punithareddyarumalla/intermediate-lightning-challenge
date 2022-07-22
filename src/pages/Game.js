@@ -3,7 +3,7 @@ import fontStyles from "../lib/fontStyles";
 import GameEngine, { Directions } from "../lib/game";
 import styles from "../lib/styles";
 
-class Game extends Lightning.Component {
+export default class Game extends Lightning.Component {
   static _template() {
     return {
       w: 1920,
@@ -104,6 +104,8 @@ class Game extends Lightning.Component {
   _handleRight() {
     this.game.handle(Directions.RIGHT);
   }
-}
 
-export default Game;
+  _setup() {
+    this.startGame();
+  }
+}

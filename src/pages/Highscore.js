@@ -136,7 +136,6 @@ class Highscore extends Lightning.Component {
 
     switch (pageToNavigateTo) {
       case "Play Again":
-        console.log("Navigate to play");
         Router.navigate("play");
         break;
       case "Home":

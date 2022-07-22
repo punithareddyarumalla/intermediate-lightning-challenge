@@ -108,4 +108,8 @@ export default class Game extends Lightning.Component {
   _setup() {
     this.startGame();
   }
+
+  _active() {
+    this.startGame();
+  }
 }

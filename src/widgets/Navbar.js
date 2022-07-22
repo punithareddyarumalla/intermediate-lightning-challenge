@@ -23,9 +23,8 @@ export default class Navbar extends Lightning.Component {
       },
       Text: {
         text: {
-          textColor: 0xff333333,
           text: "Snake",
-          fontSize: 50,
+          fontSize: 40,
           lineHeight: styles.fontSizes.large.lineHeight,
           textColor: Colors("green").get(),
         },
@@ -42,29 +41,35 @@ export default class Navbar extends Lightning.Component {
           src: Utils.asset("images/snake.png"),
         },
       },
-    //   HomeLink: {
-    //     text: {
-    //       textColor: 0xfffafafa,
-    //       text: "Home",
-    //       fontSize: styles.fontSizes.large.size,
-    //       lineHeight: styles.fontSizes.large.lineHeight,
-    //       ...Navbar.selectedTextHighlightStyles,
-    //       highlight: false,
-    //     },
-    //   },
-    //   NegativeToggler: {
-    //     flexItem: {
-    //       marginLeft: styles.spacing.small,
-    //     },
-    //     text: {
-    //       textColor: 0xff333333,
-    //       text: "☀️",
-    //       fontSize: styles.fontSizes.large.size,
-    //       lineHeight: styles.fontSizes.large.lineHeight,
-    //       ...Navbar.selectedTextHighlightStyles,
-    //       highlight: false,
-    //     },
-    //   },
+      Greeting: {
+        text: {
+            textColor: 0xfff6f6f6,
+            text: "Good Morning FX",
+            fontSize: 30
+        },
+        flexItem: {
+            marginLeft: 100
+        }
+      }
     };
+  }
+
+  _setup() {
+    const day = new Date();
+    var hr = day.getHours();
+    let greeting;
+    if (hr >= 0 && hr < 12) {
+        greeting = "Good Morning FX";
+    } else if (hr == 12) {
+        greeting = "Good Night FX";
+    } else if (hr >= 12 && hr <= 17) {
+        greeting = "Good Afternoon FX";
+    } else {
+        greeting = "Good Evening FX";
+    }
+
+    this.tag("Greeting").patch({
+        text: greeting
+    })
   }
 }

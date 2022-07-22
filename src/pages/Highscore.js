@@ -11,11 +11,11 @@ class Highscore extends Lightning.Component {
       h: 1080,
       color: Colors("black").get(),
       rect: true,
-
+      
       Highscores: {
         w: 1920,
         h: 540,
-        y: 0,
+        y: 60,
 
         Title: {
           y: styles.spacing.large + styles.spacing.medium,

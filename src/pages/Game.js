@@ -10,15 +10,16 @@ class Game extends Lightning.Component {
       h: 1080,
       color: Colors("black").get(),
       rect: true,
-
+      
       GameItems: {
         w: 1920,
         h: 1080,
+        y: 100
       },
 
       Score: {
         x: (w) => w - styles.spacing.large,
-        y: styles.spacing.medium,
+        y: 100 + styles.spacing.medium,
 
         mountX: 1,
         text: {

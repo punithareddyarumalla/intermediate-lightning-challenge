@@ -104,6 +104,10 @@ class Game extends Lightning.Component {
   _handleRight() {
     this.game.handle(Directions.RIGHT);
   }
+
+  _active() {
+    this.startGame();
+  }
 }
 
 export default Game;

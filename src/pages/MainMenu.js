@@ -73,7 +73,25 @@ class MainMenu extends Lightning.Component {
       },
     };
   }
-
+/* [I don’t think we explained it correctly as we have seen many people do this; The right approach is to use different handlers for playItem and HighscoreItem]
+Example: PlayItem: {
+     type: Button,
+     title: "Play",
+     signals: {
+      buttonPressed: "_playItemSignal",
+     },
+    },
+---------------------------------
+ HighscoreItem: {
+     type: Button,
+     title: "Highscore",
+     flexItem: {
+      marginTop: styles.spacing.medium,
+     },
+     signals: {
+      buttonPressed: "_highscoreItemSignal",
+     },
+    } */
   _index = 0;
 
   get focusedItem() {

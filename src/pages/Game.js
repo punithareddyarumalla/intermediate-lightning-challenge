@@ -113,3 +113,9 @@ export default class Game extends Lightning.Component {
     this.startGame();
   }
 }
+
+/* Not ended the game; Please use the below.
+ _inactive() {
+  this.endGame();
+ }
+Can use _disable() as well */

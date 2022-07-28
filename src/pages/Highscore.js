@@ -136,6 +136,7 @@ class Highscore extends Lightning.Component {
   _handleClearHighscore() {
     clearHighscores();
     this._renderHighscores();
+/* This is unnecessary, but that's ok */
   }
 }
 

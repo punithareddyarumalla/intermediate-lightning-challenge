@@ -20,3 +20,5 @@ export default {
     },
   ],
 };
+
+/* The way you split out the files is good.Good Idea to put this page in lib */

@@ -47,3 +47,5 @@ export default class App extends Router.App {
     };
   }
 }
+
+/* Set up done correctly */

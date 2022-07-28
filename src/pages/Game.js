@@ -96,7 +96,7 @@ class Game extends Lightning.Component {
   _disable() {
     this.endGame();
   }
-
+/* _active and _disable - perfect */
   _handleUp() {
     this.game.handle(Directions.UP);
   }

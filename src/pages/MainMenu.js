@@ -98,3 +98,5 @@ class MainMenu extends Lightning.Component {
 }
 
 export default MainMenu;
+
+/* The unique handlers for buttonpressed(PlayItem, HighscoreItem) is a good thought */

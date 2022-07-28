@@ -112,3 +112,7 @@ class Game extends Lightning.Component {
 }
 
 export default Game;
+
+/* Started the game _active() but didn't end the game _inactive() or _disable() */
+
+/* Well done on the extra challenge */
